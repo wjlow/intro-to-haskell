@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  dev:
+    image: haskell:8.8@sha256:cb44fca8e8a31af662f6019d6c6cefae7374aaf5bc5b37966e52cb34307c1805
+    working_dir: /work
+    command: support/dev/run
+    volumes:
+      - .:/work
+      - stack-global:/root/.stack
+
+volumes:
+  stack-global:
+    external: true

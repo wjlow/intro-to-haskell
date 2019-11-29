@@ -1,0 +1,14 @@
+#!/bin/bash
+set -Eexuo pipefail
+
+cd $(dirname $0)/..
+
+# Create volume
+docker volume create --name stack-global > /dev/null
+
+mkdir -p ./dist
+
+docker-compose build ${SERVICE-dev}
+
+# Run dev script or use what is passed in as arguments
+docker-compose run --rm ${SERVICE-dev} "$@"

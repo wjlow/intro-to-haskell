@@ -1,0 +1,54 @@
+name:                intro-to-haskell
+version:             0.1.0.0
+github:              github.com/wjlow/intro-to-haskell
+license:             OtherLicense
+author:              Jack Low
+
+extra-source-files:
+- README.md
+
+ghc-options:
+- -Wall
+- -Wcompat
+- -Wincomplete-uni-patterns
+- -Wincomplete-record-updates
+- -Widentities
+- -Wredundant-constraints
+- -Wmonomorphism-restriction
+
+default-extensions:
+- MultiWayIf
+- OverloadedStrings
+
+description: intro-to-haskell
+
+dependencies:
+- base >= 4.11 && < 5
+- text
+- hashmap
+
+library:
+  source-dirs: src
+
+executables:
+  intro-to-haskell-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - intro-to-haskell
+
+tests:
+  intro-to-haskell-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - intro-to-haskell
+    - hspec
