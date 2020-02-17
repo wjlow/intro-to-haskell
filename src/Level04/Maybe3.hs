@@ -17,7 +17,10 @@ data Person = Person {
 } deriving (Eq, Show)
 
 jobsTable :: Map JobId Job
-jobsTable = fromList $ [(1, Job "Teacher" "Expert in their field"), (2, Job "Engineer" "Build things for people")]
+jobsTable = fromList $ [
+        (1, Job "Teacher" "Expert in their field"), 
+        (2, Job "Engineer" "Build things for people")
+    ]
 
 personsTable :: Map PersonId Person
 personsTable = fromList $ [
@@ -27,25 +30,16 @@ personsTable = fromList $ [
     ]
 
 findPersonById :: PersonId -> Maybe Person
-findPersonById pid = Data.HashMap.lookup pid personsTable
+findPersonById pid = undefined
 
 findJobById :: JobId -> Maybe Job
-findJobById jid = Data.HashMap.lookup jid jobsTable
+findJobById jid = undefined
 
 findJobIdByPersonId :: PersonId -> Maybe JobId
-findJobIdByPersonId pid = do
-    person <- findPersonById pid
-    maybeJobId person
+findJobIdByPersonId pid = undefined
 
 findJobByPersonId :: PersonId -> Maybe Job
-findJobByPersonId pid = do
-    person <- findPersonById pid
-    jobId <- maybeJobId person
-    findJobById jobId
+findJobByPersonId pid = undefined
 
 findJobNameByPersonId :: PersonId -> Maybe String
-findJobNameByPersonId pid = do
-    person <- findPersonById pid
-    jobId <- maybeJobId person
-    job <- findJobById jobId
-    pure (jobName job)
+findJobNameByPersonId pid = undefined

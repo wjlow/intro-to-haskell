@@ -24,44 +24,31 @@ jobsTable = fromList $ [
     ]
 
 personsTable :: Map PersonId Person
-personsTable = fromList $ [
-        (1, Person "Sally" Nothing),
-        (2, Person "Jenny" (Just 1)),
-        (3, Person "Timmy" (Just 1024))
-    ]
+personsTable = undefined
 
 findPersonById :: PersonId -> Maybe Person
-findPersonById pid = Data.HashMap.lookup pid personsTable
+findPersonById pid = undefined
 
 findJobById :: JobId -> Maybe Job
-findJobById jid = Data.HashMap.lookup jid jobsTable
+findJobById jid = undefined
 
 findJobDescriptionGivenJobIdA :: JobId -> Maybe String
-findJobDescriptionGivenJobIdA jid = 
-    let maybeJob = findJobById jid
-    in case maybeJob of
-        Just job -> Just (description job)
-        Nothing -> Nothing
+findJobDescriptionGivenJobIdA jid = undefined
 
 findJobDescriptionGivenJobIdB :: JobId -> Maybe String
-findJobDescriptionGivenJobIdB jid = fmap description (findJobById jid)
+findJobDescriptionGivenJobIdB jid = undefined
 
 findJobDescriptionGivenJobIdOrElseA :: JobId -> String
-findJobDescriptionGivenJobIdOrElseA jid = 
-    case findJobDescriptionGivenJobIdA jid of
-        Just desc -> desc
-        Nothing -> "Job with id " ++ (show jid) ++ " does not exist"
+findJobDescriptionGivenJobIdOrElseA jid = undefined
 
 findJobDescriptionGivenJobIdOrElseB :: JobId -> String
-findJobDescriptionGivenJobIdOrElseB jid = 
-    let defaultMsg = "Job with id " ++ (show jid) ++ " does not exist"
-    in fromMaybe defaultMsg (findJobDescriptionGivenJobIdA jid)
+findJobDescriptionGivenJobIdOrElseB jid = undefined
 
 findJobIdByPersonId :: PersonId -> Maybe JobId
-findJobIdByPersonId pid = findPersonById pid >>= maybeJobId
+findJobIdByPersonId pid = undefined
 
 findJobByPersonId :: PersonId -> Maybe Job
-findJobByPersonId pid = findJobIdByPersonId pid >>= findJobById
+findJobByPersonId pid = undefined
 
 findJobNameByPersonId :: PersonId -> Maybe String
-findJobNameByPersonId pid = fmap jobName (findJobByPersonId pid)
+findJobNameByPersonId pid = undefined

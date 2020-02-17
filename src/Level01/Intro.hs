@@ -4,32 +4,32 @@ module Level01.Intro where
 -- and produces an `Int` as output.
 -- `x` and `y` are names we have given to the first and second `Int`s respectively.
 add :: Int -> Int -> Int
-add x y = x + y
+add x y = undefined
 
 add5 :: Int -> Int
-add5 = add 5
+add5 = undefined
 
 -- How many ways can you implement this function?
 foo :: a -> a
-foo a = a
+foo a = undefined
 
 -- How about this one?
 bar :: Int -> Int
-bar num = num
+bar num = undefined
 
 -- The syntax for if-then-else is: `if condition then expression1 else expression2`
 timesTwoIfEven :: Int -> Int
-timesTwoIfEven x = if even x then x * 2 else x
+timesTwoIfEven x = undefined
 
 -- Hint: Use `++` to concatenate `String`s
 showNumber :: Int -> String
-showNumber num = "The number is " ++ (show num)
-
+showNumber num = undefined
+    
 pair :: String -> Int -> (String, Int)
-pair name age = (name, age)
+pair name age = undefined
 
 first :: (String, Int) -> String
-first (str, _) = str
+first = undefined
 
 second :: (String, Int) -> Int
-second (_, num) = num
+second = undefined

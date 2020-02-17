@@ -24,6 +24,8 @@ minus :: Int -> Int
 minus x y = x - y
 ```
 
+There is a [`solutions`](https://github.com/wjlow/intro-to-haskell/tree/solutions) branch if you're stuck :)
+
 ## To compile
 
 ```

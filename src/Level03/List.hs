@@ -1,24 +1,22 @@
 module Level03.List where
 
 prependToList :: a -> [a] -> [a]
-prependToList x xs = x : xs
+prependToList x xs = undefined
 
 appendToList :: a -> [a] -> [a]
-appendToList x xs = xs ++ [x]
+appendToList x xs = undefined
 
 isEmptyList :: [a] -> Bool
-isEmptyList [] = True
-isEmptyList (_ : _) = False
+isEmptyList = undefined
 
 showListSize :: [a] -> String
-showListSize [] = "This is an empty list"
-showListSize xs = "This is a list of size " ++ show (length xs)
+showListSize = undefined
 
 addNumToEach :: Int -> [Int] -> [Int]
-addNumToEach x xs = map (+x) xs
+addNumToEach x xs = undefined
 
 filterEven :: [Int] -> [Int]
-filterEven xs = filter even xs
+filterEven xs = undefined
 
 product :: [Int] -> Int
-product xs = foldl (*) 1 xs
+product xs = undefined
