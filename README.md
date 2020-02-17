@@ -1,8 +1,28 @@
 # intro-to-haskell
 
-This is a port of [intro-to-scala](https://github.com/wjlow/intro-to-scala) to teach Haskell by solving simple problems.
+This is a port of [intro-to-scala](https://github.com/wjlow/intro-to-scala) to teach very basic Haskell by solving simple problems.
 
 You are expected to be able to program in at least one programming language rather fluently before attempting these exercises.
+
+## How to work on exercises
+
+All the exercises have been blanked out with `= undefined`. Complete them in order from `Level01` to `Level05`. Unit tests have been written for every exercise, so do compile and test as you go.
+
+You are not only expected to replace `undefined` with the function implementation. In certain exercises you are expected to fill out the names of the input parameters to the left hand side of the `=` sign as well. 
+
+For example:
+
+```
+minus :: Int -> Int
+minus = undefined
+```
+
+may be solved as:
+
+```
+minus :: Int -> Int
+minus x y = x - y
+```
 
 ## To compile
 
